@@ -40,11 +40,11 @@ npm install ejs
 
 ```
    node server.js
-'''
+```
 ou
-'''
+```
 nodemon server.js
-'''
+```
 
 * Aller sur le lien https://localhost:3001 pour voir la page d'accueil de l'application
 
@@ -113,30 +113,30 @@ dataVegetal = Generators.observe(notify => {
   return () => socket.close();
 })
 
-'''
+```
 ## Dashboard en version API
 
 ###### On peut aussi allimenter le dashboard en utilisant les données de l'API devéloppée ou de datagrandlyon voir https://observablehq.com/@moustapha/dashboard-modulable.
 
 ### Exemple sur les données des espaces vegetal
 
-'''
+```
 urlEspacesVegetal = "http://localhost:3001/api/espacesvegetal"
 
-'''
+```
 
-'''
+```
 vegetal = fetch(urlVegetal).then(response => {
   return response.json();
 })
-'''
+```
 ### Exemple 2 sur les données des arbres vegetal
-'''
-'''
+
+```
 urlVegetal = "http://localhost:3001/api/espacesvegetal"
-'''
-'''
+```
+```
 Espacevegetal = fetch(urlEspaceVegetal).then(response => {
   return response.json();
 })
-'''
+```
