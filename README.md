@@ -80,7 +80,7 @@ Le dashboard à été réalisé en utilisant du d3.js avec les notebook observab
 #### 0. Allez sur le lien du notebook: https://observablehq.com/@moustapha/modular-dashboard-with-websocket/3?oetm_referrer=https%3A%2F%2Flocalhost%3A3001%2F&oetm_route=%2F%40moustapha%2Fmodular-dashboard-with-websocket%2F3
 
 
-#### 1. Cliquer sur l'onglet en haut et à droite dans la fenetre qui s'ouvre taper sur Embed cells>
+#### 1. Cliquer sur l'onglet en haut et à droite dans la fenetre qui s'ouvre taper sur "Embed cells"
 
 #### 2. Une fenetre s'ouvre et vous avez la possiblité de choisir les cellules à afficher.Nous avons décider de prendre le notebook entier en selectionnant Entire notebook>
 
