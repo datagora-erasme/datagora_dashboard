@@ -6,34 +6,39 @@ Le projet Dashboad est piloté par Erasme  dans le cadre de Datagora dont l'obje
 ---
 ## Installation 
 
-### 1. Installation server web et version websocket
+### 1. Installation server web  
 
 #### Prérequis
 #####  Installer node.js
 
 * Installer les module complémentaire ws:
+#### installation de ws
 
-'''
+```
     npm install ws
-'''
-'''
+```
+#### Installation de socket.IO
+```
    npm install socket.io
-'''
-'''
+```
+#### Installation de express
+```
 npm install express
 
-'''
+```
+#### Tnstallation de ejs
+
+```
 npm install ejs
 
-'''
-'''
-npm install nodemon
-'''
+```
+
+
 * lancer de l'application 
 
-#### Lancer le serveur avec la commande "node server.js depuis le repertoire WebsocketServer
+#### Lancer le serveur  depuis le repertoire WebsocketServer
 
-'''
+```
    node server.js
 '''
 ou
@@ -64,12 +69,7 @@ nodemon server.js
 
 ##### DataParcsJardins                  wss://localhost:8080/dataParcsJardins
 
-
-
-
-### 
-
-
+---
 
 ## Intégration du note book sur une page web
 
@@ -87,10 +87,8 @@ Le dashboard à été réalisé en utilisant du d3.js avec les notebook observab
 #### 3. Puis sur la meme fenetre selectionner l'option iframe et cliquer sur copy pour copier le code dans un fichier.Pour nous c'est le fichier dashboard.ejs dans le repertoire /var/www/erasme/views>
 
 ## Dashboard en version websocket
-
-Voici comment ajouter des données sur le serveur en utilisant des websocket
-
-'''
+Ajouter des données avec les websocket
+```
 dataVegetal = Generators.observe(notify => {
   const data = [];
   const socket = new WebSocket("wss://localhost:8080/dataVegetal");
@@ -118,14 +116,15 @@ dataVegetal = Generators.observe(notify => {
 '''
 ## Dashboard en version API
 
-On peut aussi allimenter le dashboard en utilisant les données de l'API devéloppée ou de datagrandlyon.
+###### On peut aussi allimenter le dashboard en utilisant les données de l'API devéloppée ou de datagrandlyon voir https://observablehq.com/@moustapha/dashboard-modulable.
+
 ### Exemple sur les données des espaces vegetal
 
 '''
 urlEspacesVegetal = "http://localhost:3001/api/espacesvegetal"
-'''
 
 '''
+
 '''
 vegetal = fetch(urlVegetal).then(response => {
   return response.json();
