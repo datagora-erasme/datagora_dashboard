@@ -9,7 +9,7 @@ Le projet Dashboad est piloté par Erasme  dans le cadre de Datagora dont l'obje
 ### 1. Installation server web et version websocket
 
 #### Prérequis
-* Installer node.js
+#####  Installer node.js
 
 * Installer les module complémentaire ws:
 
@@ -29,22 +29,52 @@ npm install ejs
 '''
 npm install nodemon
 '''
-### lancer de l'application 
+* lancer de l'application 
 
-* Lancer le serveur avec la commande "node server.js depuis le repertoire WebsocketServer
+#### Lancer le serveur avec la commande "node server.js depuis le repertoire WebsocketServer
 
 '''
    node server.js
 '''
+ou
+'''
+nodemon server.js
+'''
 
 * Aller sur le lien https://localhost:3001 pour voir la page d'accueil de l'application
+
+#### pour charger un prototype vous pouvez aller sur   dans le dossier  exemples
+
+#### Vous touverez des protos déja enregistrés dénomé myParameters3.json,myParameters4.json, myParameters5.json  que vous pouvez charger ou commencer un nouveau demo en utilisant un proto vierge en chargeant myParameters.json.
+
+
+#### Pour visuliser les données  utilisées par le dashboard vous pouvez utiliser l’extension simple websocket 
+
+#### Voici les routes pous les donnée:
+
+#### Copier dans URL:
+
+##### DataVegetal  :                       wss://localhost:8080/dataVegetal
+
+##### Espaces Vegetalisées:           wss://localhost:8080/dataEspacesVegetalisesPourcentageLyon
+
+##### DataGeoLyon :                     wss://localhost:8080/dataGeoLyon
+
+##### DataAlignements                  wss://localhost:8080/dataAlignements
+
+##### DataParcsJardins                  wss://localhost:8080/dataParcsJardins
+
+
+
 
 ### 
 
 
 
 ## Intégration du note book sur une page web
+
 Le dashboard à été réalisé en utilisant du d3.js avec les notebook observable.
+
 ### Prérequis avoir un compte observable et faire un fork du notebook
 
 #### 0. Allez sur le lien du notebook: https://observablehq.com/@moustapha/modular-dashboard-with-websocket/3?oetm_referrer=https%3A%2F%2Flocalhost%3A3001%2F&oetm_route=%2F%40moustapha%2Fmodular-dashboard-with-websocket%2F3
@@ -57,7 +87,9 @@ Le dashboard à été réalisé en utilisant du d3.js avec les notebook observab
 #### 3. Puis sur la meme fenetre selectionner l'option iframe et cliquer sur copy pour copier le code dans un fichier.Pour nous c'est le fichier dashboard.ejs dans le repertoire /var/www/erasme/views>
 
 ## Dashboard en version websocket
-Ajouter des données avec les websocket
+
+Voici comment ajouter des données sur le serveur en utilisant des websocket
+
 '''
 dataVegetal = Generators.observe(notify => {
   const data = [];
@@ -82,5 +114,30 @@ dataVegetal = Generators.observe(notify => {
   notify(data[0]);
   return () => socket.close();
 })
+
 '''
 ## Dashboard en version API
+
+On peut aussi allimenter le dashboard en utilisant les données de l'API devéloppée ou de datagrandlyon.
+### Exemple sur les données des espaces vegetal
+
+'''
+urlEspacesVegetal = "http://localhost:3001/api/espacesvegetal"
+'''
+
+'''
+'''
+vegetal = fetch(urlVegetal).then(response => {
+  return response.json();
+})
+'''
+### Exemple 2 sur les données des arbres vegetal
+'''
+'''
+urlVegetal = "http://localhost:3001/api/espacesvegetal"
+'''
+'''
+Espacevegetal = fetch(urlEspaceVegetal).then(response => {
+  return response.json();
+})
+'''
