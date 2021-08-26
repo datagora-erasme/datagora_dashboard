@@ -13,29 +13,29 @@ Le projet Dashboad est piloté par Erasme  dans le cadre de Datagora dont l'obje
 
 * Installer les module complémentaire ws:
 
-'''
+```
     npm install ws
-'''
-'''
+```
+```
    npm install socket.io
-'''
-'''
+```
+```
 npm install express
 
-'''
+```
 npm install ejs
 
-'''
-'''
+```
+```
 npm install nodemon
-'''
+```
 ### lancer de l'application 
 
 * Lancer le serveur avec la commande "node server.js depuis le repertoire WebsocketServer
 
-'''
+```
    node server.js
-'''
+```
 
 * Aller sur le lien https://localhost:3001 pour voir la page d'accueil de l'application
 
@@ -58,7 +58,7 @@ Le dashboard à été réalisé en utilisant du d3.js avec les notebook observab
 
 ## Dashboard en version websocket
 Ajouter des données avec les websocket
-'''
+```
 dataVegetal = Generators.observe(notify => {
   const data = [];
   const socket = new WebSocket("wss://localhost:8080/dataVegetal");
@@ -82,5 +82,5 @@ dataVegetal = Generators.observe(notify => {
   notify(data[0]);
   return () => socket.close();
 })
-'''
+```
 ## Dashboard en version API
