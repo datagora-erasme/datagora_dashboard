@@ -46,6 +46,8 @@ ou
 nodemon server.js
 ```
 
+* Aller sur le lien https://localhost:8080 pour accepter le certificat et permettre au dashboard de se connecter au serveur.
+
 * Aller sur le lien https://localhost:3001 pour voir la page d'accueil de l'application
 
 #### pour charger un prototype vous pouvez aller sur   dans le dossier  exemples
